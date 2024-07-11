@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+
+
+}
+
+/* all the changes done
+------------------------------
+---------------------------------
+------------------------------
+---------------------------------
+------------------------------
+--------------------------------- */
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow-x: hidden;
+    max-width: 250px;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    transform: translateX(0%);
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, 0.8);
+}
+
+.leftside.show {
+    transform: translateX(-75%);
+}
+
+
+/* #menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 24px;
+    color: #333;
+} */
+
+.sidenavbar a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidenavbar a i {
+    margin-right: 0px;
+    margin-left: 3px;
+}
+
+.leftside.show~.morale {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+.leftside.show .sidenavbar a span {
+    display: none;
+}
+
+.leftside.show .admin_profile span {
+    display: none;
+}
+
+.leftside.show~.search span {
+    display: none;
+}
+
+.leftside.show .sidenavbar a {
+    justify-content: right;
+}
+
+/* END OF CHANGES */
+/* ------------------------------------------------
+------------------------------
+---------------------------------
+----------------------------------- */
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    overflow-x: hidden;
+    max-width: 250px;
+    height: 100%;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, .8);
+}
+
+
+.admin_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid rgba(75, 75, 88, 0.299);
+    padding: 5px 10px;
+
+
+}
+
+.admin_profile #menu {
+    position: relative;
+    left: 40%;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #077ff834;
+    border: 1px solid #0080ff63;
+    border-radius: 5px;
+    display: none;
+}
+
+.admin_profile #menu i {
+    width: 30px;
+    height: 30px;
+    color: #007FFF;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+
+.Admin_acc h5 {
+    color: rgba(55, 55, 55, 0.938);
+}
+
+.profile_btn {
+    display: block;
+    width: 80%;
+    padding: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #077ff834;
+    color: #007FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.sidenavbar {
+    width: 250px;
+    height: 600px;
+    border: 1px solid rgba(75, 75, 88, 0.299);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.leftside .sidenavbar a {
+    text-decoration: none;
+    height: 42px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.932);
+    font-size: 19px;
+    padding: 8px 20px;
+    margin: 0px auto;
+    letter-spacing: 0.3px;
+
+}
+
+.leftside .sidenavbar a i {
+    padding-right: 5px;
+}
+
+.sidenavbar a:hover {
+    border-right: 3px solid #007FFF;
+    color: #007FFF;
+}
+
+
+/* header */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+    padding: 10px;
+    height: 45px;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, .8);
+}
+
+
+.nav h4 {
+    color: #007FFF;
+}
+
+.nav .date .Today_Date {
+    color: rgba(0, 0, 0, 0.557);
+}
+
+/* morale */
+
+#search {
+    width: 50%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    background-color: #0080ff0e;
+
+}
+
+#search:focus {
+    width: 50%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.allproduct {
+    width: 77%;
+    padding: 10px;
+    margin-left: 270px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    /* background-color: #0f73d70e; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0f73d70e;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr .rowGap {
+    width: 200px;
+}
+
+/* btn */
+.update-price {
+    margin-left: 7px;
+    width: 70px;
+    padding: 3px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    background: rgba(251, 251, 253, .8);
+    color: #007FFF;
+    border: 1.3px solid #0080ffa2;
+    border-radius: 2px;
+}
+
+/* btn */
+.update-qty {
+    margin-left: 7px;
+    width: 70px;
+    padding: 3px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    background: rgba(251, 251, 253, .8);
+    color: #007FFF;
+    border: 1.3px solid #0080ffa2;
+    border-radius: 2px;
+}
+
+/* Update price form */
+.form {
+    position: absolute;
+    top: 70px;
+    left: 68%;
+    z-index: 999;
+    height: 320px;
+    width: 300px;
+    padding: 5px 15px;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(63, 128, 155, 0.162);
+    display: none;
+}
+
+.form .update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form .update .mtpriceqty {
+    margin-top: 10px;
+}
+
+.form .update label {
+    margin: -8px 0px;
+}
+
+.form .update input {
+    padding: 4px 10px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.form .update button {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 4px 10px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Update quantity form */
+.formqty {
+    position: absolute;
+    top: 70px;
+    left: 68%;
+    z-index: 999;
+    height: 380px;
+    width: 300px;
+    padding: 5px 15px;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(153, 153, 154, 0.162);
+    display: none;
+    border-radius: 5px;
+}
+
+.formqty .update .mtpriceqty {
+    margin-top: 10px;
+}
+
+.formqty .update label {
+    margin: -8px 0px;
+}
+
+.formqty .update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formqty .update input {
+    padding: 4px 10px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.formqty .update button {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 4px 10px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}

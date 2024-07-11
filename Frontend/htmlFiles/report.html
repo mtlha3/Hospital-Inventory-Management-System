@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/report.css" />
+    <title>Reports | HIMS</title>
+
+    <style>
+      .sidenavbar .report {
+        border-right: 3px solid #007fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leftside">
+      <div class="admin_profile">
+        <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        <span class="idprofile">
+          <!-- I have place the profile part ina span to make display none -->
+          <div class="profile">
+            <img src="../assets/pro_logo.png" alt="Admin Profile" />
+            <div class="Admin_acc">
+              <h4>Inventory Admin</h4>
+              <h5>inventory@hosp.com</h5>
+            </div>
+          </div>
+          <button class="profile_btn">Log out</button>
+          <!-- Here is the end of this span added -->
+        </span>
+      </div>
+      <div class="sidenavbar">
+        <!-- Check all the ankel tags they have span added to them -->
+        <a href="./dashBoard.html" class="dashboard"
+          ><i class="fa-solid fa-house"></i><span>Dashboard</span></a
+        >
+        <a href="./allProducts.html"
+          ><i class="fa-solid fa-cart-plus"></i><span>All Product</span></a
+        >
+        <a href="./addProducts.html" class="addProduct"
+          ><i class="fa-solid fa-plus"></i><span>Add Product</span></a
+        >
+        <a href="./general.html"
+          ><i class="fa-solid fa-pen-clip"></i><span>General Item</span></a
+        >
+        <a href="./medicalitems.html"
+          ><i class="fa-solid fa-stethoscope"></i><span>Medical Item</span></a
+        >
+        <a href="./electrical.html" class="electrical"
+          ><i class="fa-solid fa-bolt"></i><span>Electrical Item</span></a
+        >
+        <a href="./hygenic.html"
+          ><i class="fa-solid fa-pump-medical"></i><span>Hygienic Item</span></a
+        >
+        <a href="./otherItems.html"
+          ><i class="fa-brands fa-bitbucket"></i><span>Others*</span></a
+        >
+        <a href="./orderdispatch.html"
+          ><i class="fa-solid fa-bell"></i><span>Orders</span></a
+        >
+        <a href="./report.html" class="report"
+          ><i class="fa-solid fa-comment-dots"></i><span>Report</span></a
+        >
+      </div>
+      <!-- uptill here you can check -->
+    </div>
+
+    <!-- morale -->
+
+    <div class="nav">
+      <h4>Reports</h4>
+      <div class="date">
+        <h5 class="Today_Date">Today's Date</h5>
+        <h5 class="time">2024-10-04</h5>
+      </div>
+    </div>
+
+    <button id="exportSheet" class="exportbtn">
+      <i class="fa-solid fa-file-excel"></i>Generate Sheet
+    </button>
+
+    <div class="container"></div>
+
+    <script
+      src="https://kit.fontawesome.com/64f984f188.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="../JavaScript/report.js"></script>
+  </body>
+</html>

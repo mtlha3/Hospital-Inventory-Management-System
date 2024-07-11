@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    overflow-x: hidden;
+    max-width: 250px;
+    height: 100%;
+
+}
+
+
+.admin_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid rgba(75, 75, 88, 0.299);
+    padding: 5px 10px;
+
+}
+
+.admin_profile #menu {
+    position: relative;
+    left: 40%;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #077ff834;
+    border: 1px solid #0080ff63;
+    border-radius: 5px;
+    display: none;
+}
+
+.admin_profile #menu i {
+    width: 30px;
+    height: 30px;
+    color: #007FFF;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+
+.Admin_acc h5 {
+    color: rgba(55, 55, 55, 0.938);
+}
+
+.profile_btn {
+    display: block;
+    width: 80%;
+    padding: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #077ff834;
+    color: #007FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.sidenavbar {
+    width: 250px;
+    height: 600px;
+    border: 1px solid rgba(75, 75, 88, 0.299);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.leftside .sidenavbar a {
+    text-decoration: none;
+    height: 42px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.932);
+    font-size: 19px;
+    padding: 8px 20px;
+    margin: 0px auto;
+    letter-spacing: 0.3px;
+
+}
+
+.leftside .sidenavbar a i {
+    padding-right: 5px;
+}
+
+.sidenavbar a:hover {
+    border-right: 3px solid #007FFF;
+    color: #007FFF;
+}
+
+
+/* morale */
+
+
+.morale {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 275px;
+    position: relative;
+}
+
+.morale .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px -25px;
+    padding: 2px 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, .8);
+}
+
+.morale .nav h4 {
+    color: #007FFF;
+}
+
+.morale .nav .date .Today_Date {
+    color: rgba(0, 0, 0, 0.557);
+}
+
+.morale .form {
+    background: linear-gradient(to bottom, #a4dbf1e5, #48afefca);
+    height: 520px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #007FFF;
+}
+
+
+.morale .img {
+    width: 50%;
+    background: url(../assets/frame.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.morale .addform {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 10px;
+}
+
+.morale .addform input {
+    width: 380px;
+    font-size: 16px;
+    padding: 5px 7px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px;
+}
+
+.morale .addform .first3inp {
+    display: flex;
+    flex-direction: column;
+}
+
+.morale .addform .first3inp label {
+    margin-left: 10px;
+}
+
+.morale .addform #categoryType {
+    width: 380px;
+    font-size: 16px;
+    padding: 5px 7px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px;
+}
+
+.morale .addform .row {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 25px;
+}
+
+.morale .addform .row .inp {
+    display: flex;
+    flex-direction: column;
+}
+
+.morale .addform .row label {
+    margin-left: 10px;
+}
+
+.morale .addform .row input {
+    width: 175px;
+    font-size: 14px;
+}
+
+.morale .addform button {
+    width: 380px;
+    font-size: 18px;
+    padding: 7px;
+    color: white;
+    background-color: #007FFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

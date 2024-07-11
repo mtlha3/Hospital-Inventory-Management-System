@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Registration Form</title>
+    <link rel="stylesheet" href="../Styles/registerAdmin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin_display_form">
+      <form id="registrationForm" class="main_section">
+        <div class="hospital">
+          <img class="logoimg" src="../assets/logonlogo.jpeg" alt="" />
+          <h2>Emerald Care</h2>
+          <button id="goBack"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <h2>ADMIN</h2>
+        <div class="infoin">
+          <label for="name">Name:</label><br />
+          <input
+            type="text"
+            id="adminName"
+            name="name"
+            required
+            placeholder="Enter Name"
+            disabled
+          />
+        </div>
+
+        <div class="infoin">
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="adminEmail"
+            name="email"
+            required
+            placeholder="...@email.com"
+            disabled
+          />
+        </div>
+
+        <div class="infoin">
+          <label for="password">Password:</label><br />
+          <input
+            type="text"
+            id="adminPassword"
+            name="password"
+            required
+            placeholder="******"
+            disabled
+          />
+        </div>
+
+        <div class="infoin">
+          <label for="Phone">Phone:</label><br />
+          <input
+            type="tel"
+            id="adminPhone"
+            name="Phone"
+            required
+            pattern="[0-9]{11}"
+            placeholder="0000-0000000"
+            disabled
+          />
+        </div>
+
+        <div class="infoin">
+          <label for="address">Address:</label><br />
+          <textarea
+            id="adminAddress"
+            name="address"
+            required
+            placeholder="Landmark/Street Name"
+            disabled
+          ></textarea
+          ><br /><br />
+        </div>
+        <div class="btn_styling">
+          <button id="addAdmin">ADD ADMIN</button>
+          <button id="updateAdmin">UPDATE</button>
+          <button id="deleteAdmin">DELETE</button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/64f984f188.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="../JavaScript/registerAdmin.js"></script>
+  </body>
+</html>

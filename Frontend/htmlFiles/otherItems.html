@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/General.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+
+  <style>
+    .sidenavbar .other {
+      border-right: 3px solid #007fff;
+    }
+  </style>
+
+  <body>
+    <div class="leftside">
+      <div class="admin_profile">
+        <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        <span class="idprofile">
+          <!-- I have place the profile part ina span to make display none -->
+          <div class="profile">
+            <img src="../assets/pro_logo.png" alt="Admin Profile" />
+            <div class="Admin_acc">
+              <h4>Inventory Admin</h4>
+              <h5>inventory@hosp.com</h5>
+            </div>
+          </div>
+          <button class="profile_btn">Log out</button>
+          <!-- Here is the end of this span added -->
+        </span>
+      </div>
+      <div class="sidenavbar">
+        <!-- Check all the ankel tags they have span added to them -->
+        <a href="./dashBoard.html" class="dashboard"
+          ><i class="fa-solid fa-house"></i><span>Dashboard</span></a
+        >
+        <a href="./allProducts.html"
+          ><i class="fa-solid fa-cart-plus"></i><span>All Product</span></a
+        >
+        <a href="./addProducts.html" class="addProduct"
+          ><i class="fa-solid fa-plus"></i><span>Add Product</span></a
+        >
+        <a href="./general.html"
+          ><i class="fa-solid fa-pen-clip"></i><span>General Item</span></a
+        >
+        <a href="./medicalitems.html"
+          ><i class="fa-solid fa-stethoscope"></i><span>Medical Item</span></a
+        >
+        <a href="./electrical.html" class="electrical"
+          ><i class="fa-solid fa-bolt"></i><span>Electrical Item</span></a
+        >
+        <a href="./hygenic.html"
+          ><i class="fa-solid fa-pump-medical"></i><span>Hygienic Item</span></a
+        >
+        <a href="./otherItems.html" class="other"
+          ><i class="fa-brands fa-bitbucket"></i><span>Others*</span></a
+        >
+        <a href="./orderdispatch.html"
+          ><i class="fa-solid fa-bell"></i><span>Orders</span></a
+        >
+        <a href="./report.html"
+          ><i class="fa-solid fa-comment-dots"></i><span>Report</span></a
+        >
+      </div>
+      <!-- uptill here you can check -->
+    </div>
+
+    <!-- morale -->
+
+    <div class="nav">
+      <h4>Other Item</h4>
+      <div class="date">
+        <h5 class="Today_Date">Today's Date</h5>
+        <h5 class="time">2024-10-04</h5>
+      </div>
+    </div>
+
+    <!-- <input
+      id="general_item_search"
+      type="text"
+      placeholder="Search for other type items by product name"
+    /> -->
+    <div class="morale">
+      <div class="cards">
+        <!-- <div class="card"></div> -->
+      </div>
+    </div>
+
+    <!-- Dispatch form -->
+    <div class="form-container">
+      <div class="form">
+        <div class="addform">
+          <div class="first3inp">
+            <label for="">Product ID</label>
+            <input
+              id="dispatchproductId"
+              type="text"
+              placeholder="Product ID"
+              disabled
+            />
+            <label for="">Company Name</label>
+            <input
+              id="dispatchCompanyName"
+              type="text"
+              placeholder="Enter Company Name"
+              disabled
+            />
+
+            <label for="" class="lbl">Product Name</label>
+            <input
+              type="text"
+              id="dispatchProductName"
+              placeholder="Enter Product Name"
+              disabled
+            />
+            <label for="categoryType" class="cat">Category:</label>
+            <select
+              class="categoryType"
+              id="dispatchCategoryType"
+              aria-label="Category selection"
+              disabled
+            >
+              <option value="">Select a category</option>
+              <option value="medical">Medical</option>
+              <option value="general">General</option>
+              <option value="hygienic">Hygienic</option>
+              <option value="electrical">Electrical</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="">Product Quantity</label>
+            <input
+              type="number"
+              id="dispatchProductQantity"
+              placeholder="Enter Product Quantity to dispatch"
+            />
+            <label for="" class="lbl">Department Name</label>
+            <input
+              type="text"
+              id="dispatchDepartmentName"
+              placeholder="Enter Department Name"
+            />
+          </div>
+          <button class="btn" id="dispatchBtn">
+            Dispatch
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="btn" id="dispatchCancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update Data from -->
+    <div class="UpdateData">
+      <div class="form">
+        <div class="addform">
+          <div class="first3inp">
+            <label for="">Product ID</label>
+            <input
+              id="updateproductId"
+              type="text"
+              placeholder="Product ID"
+              disabled
+            />
+            <label for="">Company Name</label>
+            <input
+              id="updatecompanyName"
+              type="text"
+              placeholder="Enter Company Name"
+            />
+
+            <label for="" class="lbl">Product Name</label>
+            <input
+              type="text"
+              id="updateproductName"
+              placeholder="Enter Product Name"
+            />
+            <label for="categoryType" class="cat">Category:</label>
+            <select
+              class="categoryType"
+              id="updatecategoryType"
+              aria-label="Category selection"
+            >
+              <option value="">Select a category</option>
+              <option value="medical">Medical</option>
+              <option value="general">General</option>
+              <option value="hygienic">Hygienic</option>
+              <option value="electrical">Electrical</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="">Product Quantity</label>
+            <input
+              type="number"
+              id="updateproductQantity"
+              placeholder="Enter New Product Quantity"
+            />
+            <label for="" class="lbl">Price</label>
+            <input
+              type="text"
+              id="updatePrice"
+              placeholder="Enter Updated Price"
+            />
+          </div>
+          <button class="btn" id="updateBtn">
+            Update
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="btn" id="cancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message update data form -->
+    <div class="message">
+      <p><b>Note: </b>Can not update price and quantity both at same time</p>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/64f984f188.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <script src="../JavaScript/otheritems.js"></script>
+  </body>
+</html>

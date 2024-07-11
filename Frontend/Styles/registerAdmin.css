@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+#goBack {
+    position: relative;
+    left: 30px;
+    width: 40px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+#goBack i {
+    color: #007fff;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+button {
+    margin: auto;
+    width: 30%;
+    height: 30px;
+    background-color: #007fff;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+textarea {
+    width: 100%;
+    outline: none;
+    padding: 3px 10px;
+}
+
+input {
+    width: 100%;
+    padding: 3px 10px;
+    outline: none;
+}
+
+/* Styling the page to bring the conctents in center */
+
+.admin_display_form {
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, 0.8);
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+/* Outlinging and display of the form */
+.main_section {
+    row-gap: 0;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+/*  hospital signature*/
+.hospital {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* logo */
+.logoimg {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+/* buttons to have them in distributed evenly */
+.btn_styling {
+    display: flex;
+    justify-content: space-evenly;
+}

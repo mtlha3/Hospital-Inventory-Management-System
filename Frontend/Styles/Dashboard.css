@@ -1,0 +1,382 @@
+/* eht code  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+}
+
+/* all the changes done
+------------------------------
+---------------------------------
+------------------------------
+---------------------------------
+------------------------------
+--------------------------------- */
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow-x: hidden;
+    max-width: 250px;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    transform: translateX(0%);
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, 0.8);
+}
+
+.leftside.show {
+    transform: translateX(-75%);
+}
+
+
+/* #menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 24px;
+    color: #333;
+} */
+
+.sidenavbar a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidenavbar a i {
+    margin-right: 0px;
+    margin-left: 3px;
+}
+
+.leftside.show~.morale {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+.leftside.show .sidenavbar a span {
+    display: none;
+}
+
+.leftside.show .admin_profile span {
+    display: none;
+}
+
+.leftside.show~.search span {
+    display: none;
+}
+
+.leftside.show .sidenavbar a {
+    justify-content: right;
+}
+
+/* END OF CHANGES */
+/* ------------------------------------------------
+------------------------------
+---------------------------------
+----------------------------------- */
+.admin_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid rgba(75, 75, 88, 0.299);
+    padding: 5px 10px;
+}
+
+.admin_profile #menu {
+    position: relative;
+    left: 40%;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #077ff834;
+    border: 1px solid #0080ff63;
+    border-radius: 5px;
+    display: none;
+}
+
+.admin_profile #menu i {
+    width: 30px;
+    height: 30px;
+    color: #007fff;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+
+.Admin_acc h5 {
+    color: rgba(55, 55, 55, 0.938);
+}
+
+.profile_btn {
+    display: block;
+    width: 80%;
+    padding: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #077ff834;
+    color: #007fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.sidenavbar {
+    width: 250px;
+    height: 600px;
+    border: 1px solid rgba(75, 75, 88, 0.299);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.leftside .sidenavbar a {
+    text-decoration: none;
+    height: 42px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.932);
+    font-size: 19px;
+    padding: 8px 20px;
+    margin: 0px auto;
+    letter-spacing: 0.3px;
+}
+
+.leftside .sidenavbar a i {
+    padding-right: 5px;
+}
+
+.sidenavbar .dashbard {
+    border-right: 3px solid #007fff;
+}
+
+.sidenavbar a:hover {
+    border-right: 3px solid #007fff;
+    color: #007fff;
+}
+
+/* morale */
+
+.morale {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 275px;
+    position: relative;
+}
+
+.morale .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px -25px;
+    padding: 2px 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(251, 251, 253, 0.8);
+}
+
+.morale .nav h4 {
+    color: #007fff;
+}
+
+.morale .nav .date .Today_Date {
+    color: rgba(0, 0, 0, 0.557);
+}
+
+/* Added min width */
+.homeimg img {
+    /* min-width: 250px; */
+    height: 220px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+/* bottom */
+
+.Status {
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+.bottom {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    /* margin-left: 250px; */
+}
+
+.bottom .p_cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bottom .p_cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 115px;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 3px #0080ffa8;
+}
+
+.bottom .p_cards .card .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 18px;
+}
+
+.bottom .p_cards .card .icon button {
+    width: 70px;
+    height: 55px;
+    background-color: #0780f818;
+    border: 1px solid #0080ffa2;
+    border-radius: 5px;
+    position: relative;
+    left: 10px;
+    color: #007fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bottom .p_cards .card .icon4 button {
+    width: 70px;
+    height: 55px;
+    background-color: #0780f818;
+    border: 1px solid #0080ffa2;
+    border-radius: 5px;
+    position: relative;
+    left: 20px;
+    color: #007fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bottom .search {
+    background: url(../assets/homeimg.webp);
+    background-size: cover;
+    background-position: center;
+    height: 255px;
+    width: 600px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* margin-top: 10px; */
+}
+
+.bottom .search #search_item {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* 
+@media only screen and (min-width: 768px) {
+    .leftside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        z-index: 9999;
+        overflow-x: hidden;
+    }
+
+    .morale {
+        margin-left: 250px;
+        width: calc(75% - 250px);
+    }
+
+    .bottom {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .leftside {
+        position: relative;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        display: block;
+    }
+
+    .morale,
+    .bottom {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+ */
+
+@media only screen and (max-width: 425px) {
+
+    /* .leftside {
+        position: fixed;
+        top: 0px;
+        z-index: 999;
+        width: 250px;
+        max-width: none;
+        height: auto;
+    } */
+    .admin_profile #menu {
+        display: block;
+    }
+}

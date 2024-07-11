@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddProducts</title>
+    <link rel="stylesheet" href="../Styles/Addproduct.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+
+  <style>
+    .sidenavbar .addProduct {
+      border-right: 3px solid #007fff;
+    }
+  </style>
+
+  <!-- body -->
+  <body>
+    <div class="addproducts">
+      <div class="leftside">
+        <div class="admin_profile">
+          <button id="menu"><i class="fa-solid fa-bars"></i></button>
+          <div class="profile" title="Click to show admin details">
+            <img src="../assets/pro_logo.png" alt="Admin Profile" />
+            <div class="Admin_acc">
+              <h4>Inventory Admin</h4>
+              <h5>inventory@hosp.com</h5>
+            </div>
+          </div>
+          <button class="profile_btn">Log out</button>
+        </div>
+        <div class="sidenavbar">
+          <a href="./dashBoard.html"
+            ><i class="fa-solid fa-house"></i>Dashboard</a
+          >
+          <a href="./allProducts.html"
+            ><i class="fa-solid fa-cart-plus"></i>All Product</a
+          >
+          <a href="./addProducts.html" class="addProduct"
+            ><i class="fa-solid fa-plus"></i>Add Product</a
+          >
+          <a href="./general.html"
+            ><i class="fa-solid fa-pen-clip"></i>General Item</a
+          >
+          <a href="./medicalitems.html"
+            ><i class="fa-solid fa-stethoscope"></i>Medical Item</a
+          >
+          <a href="./electrical.html"
+            ><i class="fa-solid fa-bolt"></i>Electrical Item</a
+          >
+          <a href="./hygenic.html"
+            ><i class="fa-solid fa-pump-medical"></i>Hygenic Item</a
+          >
+          <a href="./otherItems.html"
+            ><i class="fa-brands fa-bitbucket"></i>Others*
+          </a>
+          <a href="./orderdispatch.html"
+            ><i class="fa-solid fa-bell"></i>Orders</a
+          >
+          <a href="./report.html"
+            ><i class="fa-solid fa-comment-dots"></i>Report</a
+          >
+        </div>
+      </div>
+
+      <div class="morale">
+        <div class="nav">
+          <h4>Add New Product</h4>
+          <div class="date">
+            <h5 class="Today_Date">Today's Date</h5>
+            <h5 class="time">2024-10-04</h5>
+          </div>
+        </div>
+        <div class="form">
+          <div class="img"></div>
+          <div class="addform">
+            <div class="first3inp">
+              <label for="">Company Name</label>
+              <input
+                id="companyName"
+                type="text"
+                placeholder="Enter Company Name"
+              />
+
+              <label for="" class="lbl">Product Name</label>
+              <input
+                type="text"
+                id="productName"
+                placeholder="Enter Product Name"
+              />
+              <label for="categoryType" class="cat">Category:</label>
+              <select id="categoryType" aria-label="Category selection">
+                <option value="">Select a category</option>
+                <option value="medical">Medical</option>
+                <option value="general">General</option>
+                <option value="hygienic">Hygienic</option>
+                <option value="electrical">Electrical</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="row">
+              <div class="inp">
+                <label for="">Unit Price</label>
+                <input
+                  type="number"
+                  id="productPrice"
+                  placeholder="Enter Product price"
+                />
+              </div>
+              <div class="inp">
+                <label for="">Product Quantity</label>
+                <input
+                  type="number"
+                  id="productQantity"
+                  placeholder="Enter Product Quantity"
+                />
+              </div>
+            </div>
+            <div class="first3inp">
+              <label for="" class="addimg">Add Product Image</label>
+              <input
+                type="file"
+                id="productImage"
+                name="url"
+                placeholder="Add Image"
+                accept="image/*"
+              />
+            </div>
+            <button id="addProduct">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/64f984f188.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <script src="../JavaScript/addProducts.js"></script>
+  </body>
+</html>

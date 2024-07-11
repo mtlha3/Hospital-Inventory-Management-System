@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product List</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/allproducts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+
+  <style>
+    .sidenavbar .allProduct {
+      border-right: 3px solid #007fff;
+    }
+  </style>
+
+  <body>
+    <div class="leftside">
+      <div class="admin_profile">
+        <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        <span class="idprofile">
+          <!-- I have place the profile part ina span to make display none -->
+          <div class="profile">
+            <img src="../assets/pro_logo.png" alt="Admin Profile" />
+            <div class="Admin_acc">
+              <h4>Inventory Admin</h4>
+              <h5>inventory@hosp.com</h5>
+            </div>
+          </div>
+          <button class="profile_btn">Log out</button>
+          <!-- Here is the end of this span added -->
+        </span>
+      </div>
+      <div class="sidenavbar">
+        <!-- Check all the ankel tags they have span added to them -->
+        <a href="./dashBoard.html" class="dashboard"
+          ><i class="fa-solid fa-house"></i><span>Dashboard</span></a
+        >
+        <a href="./allProducts.html" class="allProduct"
+          ><i class="fa-solid fa-cart-plus"></i><span>All Product</span></a
+        >
+        <a href="./addProducts.html" class="addProduct"
+          ><i class="fa-solid fa-plus"></i><span>Add Product</span></a
+        >
+        <a href="./general.html"
+          ><i class="fa-solid fa-pen-clip"></i><span>General Item</span></a
+        >
+        <a href="./medicalitems.html"
+          ><i class="fa-solid fa-stethoscope"></i><span>Medical Item</span></a
+        >
+        <a href="./electrical.html" class="electrical"
+          ><i class="fa-solid fa-bolt"></i><span>Electrical Item</span></a
+        >
+        <a href="./hygenic.html"
+          ><i class="fa-solid fa-pump-medical"></i><span>Hygienic Item</span></a
+        >
+        <a href="./otherItems.html"
+          ><i class="fa-brands fa-bitbucket"></i><span>Others*</span></a
+        >
+        <a href="./orderdispatch.html"
+          ><i class="fa-solid fa-bell"></i><span>Orders</span></a
+        >
+        <a href="./report.html"
+          ><i class="fa-solid fa-comment-dots"></i><span>Report</span></a
+        >
+      </div>
+      <!-- uptill here you can check -->
+    </div>
+
+    <div class="nav">
+      <h4>All Products</h4>
+      <div class="date">
+        <h5 class="Today_Date">Today's Date</h5>
+        <h5 class="time">2024-10-04</h5>
+      </div>
+    </div>
+
+    <div class="allproduct">
+      <div class="table-container">
+        <table id="tablebody">
+          <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product type</th>
+            <th>Company Name</th>
+            <th>Price Of One Unit</th>
+            <th>Product quantity</th>
+          </tr>
+          <tr id="row"></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="form">
+      <h4>Note:</h4>
+      <h5>
+        If you entered the wrong price when adding a product, you can update it
+        here. This will change the price for all quantities of that product.
+      </h5>
+      <div class="update">
+        <label for="" class="mtpriceqty">previous Price</label>
+        <input id="previousPrice" type="number" placeholder="" disabled />
+        <label for="">New price:</label>
+        <input id="newPrice" type="number" placeholder="Enter updated price" />
+        <button id="updatePrice">Update</button>
+        <button id="cancelbtn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="formqty">
+      <h4>Note:</h4>
+      <h5>
+        If you entered the wrong quantity when adding a product, you can update
+        it here. Additionally, if you want to increase the quantity of this
+        product, you can do so directly from here.
+      </h5>
+      <div class="update">
+        <label for="" class="mtpriceqty">previous Quantity</label>
+        <input id="previousQty" type="number" placeholder="" disabled />
+        <label for="">Update Quantity:</label>
+        <input
+          id="updatedQuantity"
+          type="number"
+          placeholder="Enter updated quantity"
+        />
+        <label for="">New Quantity:</label>
+        <input
+          id="newQuantity"
+          type="number"
+          placeholder="Enter new quantity"
+        />
+        <button id="updateQty">Update</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/64f984f188.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <script src="../JavaScript/allProducts.js"></script>
+  </body>
+</html>
